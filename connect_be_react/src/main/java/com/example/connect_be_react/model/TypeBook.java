@@ -11,6 +11,8 @@ public class TypeBook {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private boolean flagDelete = false;
+
 
     public TypeBook() {
     }

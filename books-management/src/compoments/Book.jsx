@@ -126,7 +126,7 @@ export default function Book() {
                                         <td>{bookList.idName}</td>
                                         <td>{bookList.name}</td>
                                         <td>{
-                                            type.filter((typeList) => (typeList?.id == bookList?.typeBook))[0]?.name
+                                            type.filter((typeList) => (typeList?.id == bookList?.typeBook.id))[0]?.name
 
                                         }</td>
                                         <td>{bookList.day}</td>

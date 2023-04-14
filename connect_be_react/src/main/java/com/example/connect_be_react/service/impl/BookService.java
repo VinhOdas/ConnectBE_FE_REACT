@@ -1,5 +1,6 @@
 package com.example.connect_be_react.service.impl;
 
+import com.example.connect_be_react.dto.BookDto;
 import com.example.connect_be_react.model.Book;
 import com.example.connect_be_react.repository.IBookRepository;
 import com.example.connect_be_react.service.IBookService;
@@ -17,8 +18,8 @@ public class BookService implements IBookService {
 
 
     @Override
-    public List<Book> getAll( ) {
-        return bookRepository.getAll();
+    public Page<BookDto> getAll(String name, String typeBook ,Pageable pageable ) {
+        return bookRepository.getAll(name, typeBook, pageable);
     }
 
     @Override

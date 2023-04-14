@@ -11,7 +11,6 @@ public class Book {
     private String idName;
     @Column(unique = true)
     private String name;
-    @Column(unique = true)
     private String day;
     private Integer soLuong;
     private boolean flagDelete = false;

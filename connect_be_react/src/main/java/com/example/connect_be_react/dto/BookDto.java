@@ -2,11 +2,20 @@ package com.example.connect_be_react.dto;
 
 import com.example.connect_be_react.model.TypeBook;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 public class BookDto {
     private Integer id;
+    @Pattern(regexp = "BO-[0-9]{4}$", message = " định dạng BO-XXXX")
     private String idName;
+    @Size(max = 100, message = "Tên sách không dài quá 100 ký tự")
     private String name;
     private String day;
+    @Positive(message = "Số lượng sách phải là số nguyên dương")
+    @Digits(fraction = 0, message = "Số lượng sách phải là số nguyên", integer = 10)
     private Integer soLuong;
     private TypeBook typeBook;
     private boolean flagDelete = false;

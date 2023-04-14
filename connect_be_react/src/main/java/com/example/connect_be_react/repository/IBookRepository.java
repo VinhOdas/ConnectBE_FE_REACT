@@ -1,5 +1,6 @@
 package com.example.connect_be_react.repository;
 
+import com.example.connect_be_react.dto.BookDto;
 import com.example.connect_be_react.model.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,8 +16,9 @@ public interface IBookRepository extends JpaRepository<Book, Integer> {
 //    @Query(value = "select * from book where flag_delete = false ",nativeQuery = true)
 //    Page<Book> getAll(Pageable pageable);
 
-    @Query(value = "select * from book where flag_delete = false ",nativeQuery = true)
-    List<Book> getAll();
+    @Query(value = "select * from book where flag_delete = false and name like concat('%', :name, '%')" +
+                             "and type_id  like concat('%', :typeId, '%')",nativeQuery = true)
+    Page<BookDto> getAll(@Param("name") String name, @Param("typeId") String typeBook, Pageable pageable);
 
 
     @Query(value = "select * from book where flag_delete =false and id =:id",nativeQuery = true)

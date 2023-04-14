@@ -23,12 +23,14 @@ public class BookRestController {
     @Autowired
     private IBookService bookService;
     @GetMapping("")
-    public ResponseEntity<List<Book>> getAll() {
-        List<Book> benXes = bookService.getAll();
-        if (benXes.isEmpty()) {
+    public ResponseEntity<Page<BookDto>> getAll(@PageableDefault(size = 3)Pageable pageable,
+                                             @RequestParam(required = false, defaultValue = "") String name,
+                                             @RequestParam(required = false, defaultValue = "") String typeBook) {
+        Page<BookDto> books = bookService.getAll(name,typeBook,pageable);
+        if (books.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(benXes, HttpStatus.OK);
+        return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")

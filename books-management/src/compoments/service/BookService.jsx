@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-export const getAll = async (name = "" , typeId= "" ) =>{
+export const getAll = async (name ='', typeBook = '') =>{
         try {
-            let result  = await axios.get(`http://localhost:8080/book?name_like=${name}&typeId_like=${typeId}` )
+            let result  = await axios.get(`http://localhost:8080/book?name_like=${name}&typeBook_like=${typeBook}` )
             return result.data
         } catch (error) {
             
@@ -21,7 +21,7 @@ export const getAllType = async () =>{
 
 export const save = async (values) =>{
     try {
-        await axios.post(`http://localhost:8080/book/create/`, {...values})
+        await axios.post(`http://localhost:8080/book/create`, {...values})
         return values
     } catch (error) {
         console.log(error);
