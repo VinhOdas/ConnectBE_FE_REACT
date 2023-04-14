@@ -16,7 +16,7 @@ public class Book {
     private Integer soLuong;
     private boolean flagDelete = false;
     @ManyToOne
-    @JoinColumn(name = "type_Id", referencedColumnName = "id")
+    @JoinColumn(name = "type_id", referencedColumnName = "id")
     private TypeBook typeBook;
 
     public Book() {
@@ -87,4 +87,6 @@ public class Book {
     public void setTypeBook(TypeBook typeBook) {
         this.typeBook = typeBook;
     }
+
+
 }

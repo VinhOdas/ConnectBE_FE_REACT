@@ -8,4 +8,12 @@ import java.util.List;
 
 public interface IBookService {
     List<Book> getAll();
+
+    Book findBookById(Integer id);
+
+    void deleteBook(Integer id);
+
+    void editBook(Book book);
+
+    void addBook(Book book);
 }

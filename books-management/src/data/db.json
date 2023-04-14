@@ -1,0 +1,94 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "idName": "2323",
+      "name": "Khoa Hoc 2",
+      "typeId": 1,
+      "day": "14/11/1111",
+      "soLuong": 1
+    },
+    {
+      "id": 2,
+      "idName": "2323",
+      "name": "sdsadsd",
+      "typeId": 1,
+      "day": "14/11/1111",
+      "soLuong": 1
+    },
+    {
+      "idName": "23",
+      "name": "",
+      "typeId": "",
+      "day": "",
+      "soLuong": "",
+      "id": 3
+    },
+    {
+      "idName": "",
+      "name": "",
+      "typeId": "",
+      "day": "",
+      "soLuong": "",
+      "id": 4
+    },
+    {
+      "idName": "22",
+      "name": "333",
+      "typeId": "2",
+      "day": "",
+      "soLuong": 2,
+      "id": 5
+    },
+    {
+      "idName": "222",
+      "name": "21323",
+      "typeId": "2",
+      "day": "2023-05-03",
+      "soLuong": 4,
+      "id": 6
+    },
+    {
+      "idName": "sd",
+      "name": "Conan",
+      "typeId": "2",
+      "day": "2023-04-25",
+      "soLuong": 1,
+      "id": 7
+    },
+    {
+      "idName": "134",
+      "name": "Conan2",
+      "typeId": "2",
+      "day": "2023-04-18",
+      "soLuong": 5,
+      "id": 8
+    },
+    {
+      "idName": "44",
+      "name": "ád",
+      "typeId": "1",
+      "day": "2023-04-25",
+      "soLuong": 4,
+      "id": 9
+    },
+    {
+      "idName": "323",
+      "name": "ád",
+      "typeId": "1",
+      "day": "2023-05-03",
+      "soLuong": 2,
+      "id": 10
+    }
+  ],
+  "typeBook": [
+    {
+      "id": 1,
+      "name": "Khoa Hoc"
+    },
+    {
+      "id": 2,
+      "name": "Khoa Hoc 2"
+    }
+  ]
+}

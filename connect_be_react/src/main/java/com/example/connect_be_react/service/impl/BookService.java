@@ -20,4 +20,25 @@ public class BookService implements IBookService {
     public List<Book> getAll( ) {
         return bookRepository.getAll();
     }
+
+    @Override
+    public Book findBookById(Integer id) {
+        return bookRepository.findBookById(id);
+    }
+
+    @Override
+    public void deleteBook(Integer id) {
+        bookRepository.deleteBook(id);
+
+    }
+
+    @Override
+    public void editBook(Book book) {
+        bookRepository.editBook(book);
+    }
+
+    @Override
+    public void addBook(Book book) {
+        bookRepository.addBook(book);
+    }
 }
